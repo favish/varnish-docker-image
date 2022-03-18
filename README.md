@@ -21,6 +21,9 @@ volumeMounts:
             subPath: "default.vcl"
 ```
 
-
-
 [Dockerfile on GitHub](https://github.com/favish/varnish-docker-image)
+
+### History
+This repo was previously included in a [mono repo](https://github.com/favish/docker-images) and the last published
+tag with that repo was `varnish-6_alpine_1.2.1`. The CircleCI build process now publishes to a new image
+on [Dockerhub](https://hub.docker.com/repository/docker/favish/varnish).
