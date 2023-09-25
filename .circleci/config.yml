@@ -6,7 +6,6 @@ workflows:
     jobs:
       - docker/publish:
           image: favish/varnish
-          update-description: true
           tag: $CIRCLE_TAG
           filters:
             tags:
