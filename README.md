@@ -4,7 +4,7 @@ Container runs varnish with a prometheus exporter for metrication and will provi
 
 ### Notes
  
-This varnish image differs from stockin a few key ways:
+This varnish image differs from stock in a few key ways:
 
 * Supports prometheus exporter
 * Configured to allow large headers to enable Surrogate cache tags to be easily cleared:
@@ -22,6 +22,12 @@ volumeMounts:
 ```
 
 [Dockerfile on GitHub](https://github.com/favish/varnish-docker-image)
+
+### Changelog
+
+## [2.0.0] - 2023-09-25
+- Include additional VMODs so that we can hash the request body of POST requests.
+- Upgrade to Varnish 7.3
 
 ### History
 This repo was previously included in a [mono repo](https://github.com/favish/docker-images) and the last published
