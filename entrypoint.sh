@@ -13,4 +13,4 @@ varnishd -s malloc,$VARNISH_MALLOC \
   -S /etc/varnish/secret \
   -T 127.0.0.1:6082
 sleep 2
-varnishncsa & prometheus_varnish_exporter
+varnishncsa

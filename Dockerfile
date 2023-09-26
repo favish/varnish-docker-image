@@ -28,15 +28,6 @@ RUN ./bootstrap && \
     make check -j 4 && \
     make install
 
-# Prometheus exporter toggle-able with environment variable.  Check entrypoint
-ENV ENABLE_PROMETHEUS_EXPORTER=false
-RUN curl -o out.tar.gz \
-    -L https://github.com/jonnenauha/prometheus_varnish_exporter/releases/download/1.4.1/prometheus_varnish_exporter-1.4.1.linux-386.tar.gz \
-    && ls -lah \
-    && tar -zxvf out.tar.gz prometheus_varnish_exporter-1.4.1.linux-386/prometheus_varnish_exporter \
-    && chmod +x prometheus_varnish_exporter-1.4.1.linux-386/prometheus_varnish_exporter \
-    && mv prometheus_varnish_exporter-1.4.1.linux-386/prometheus_varnish_exporter /usr/local/bin
-
 ENV VARNISH_MALLOC=500M
 ENV VARNISH_SEND_TIMEOUT=600
 
