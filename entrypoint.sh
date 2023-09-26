@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 # Make sure the varnish cache storage location exists on the filesystem
 mkdir -p /var/lib/varnish/`hostname` && chown nobody /var/lib/varnish/`hostname`

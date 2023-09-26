@@ -38,7 +38,9 @@ RUN curl -o out.tar.gz \
     && mv prometheus_varnish_exporter-1.4.1.linux-386/prometheus_varnish_exporter /usr/local/bin
 
 ENV VARNISH_MALLOC=500M
-ENV VARNISH_SEND_TIMEOUT=600;
+ENV VARNISH_SEND_TIMEOUT=600
 
 COPY entrypoint.sh /entrypoint.sh
-CMD ["/entrypoint.sh"]
+RUN chmod a+x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
