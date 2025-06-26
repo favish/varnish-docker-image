@@ -1,6 +1,6 @@
 version: '2.1'
 orbs:
-  docker: circleci/docker@2.0.2
+  docker: circleci/docker@2.8.2
 workflows:
   build-docker-image-only:
     jobs:
