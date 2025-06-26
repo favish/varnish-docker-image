@@ -25,6 +25,10 @@ volumeMounts:
 
 ### Changelog
 
+## [3.0.0] - 2025-06-26
+- Upgrade to Varnish 7.7
+- Upgrade base image to Rocky Linux 9 for improved security, stability, and long-term support.
+
 ## [2.0.0] - 2023-09-25
 - Include additional VMODs so that we can hash the request body of POST requests.
 - Upgrade to Varnish 7.3
